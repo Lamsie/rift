@@ -23,7 +23,7 @@ DS_URL = 'http://vis-www.cs.umass.edu/lfw/lfw.tgz'
 def download(extract_to):
     """Download LFW Dataset archive and unpack its content into the given folder."""
     try:
-        extract_to = Path(extract_to)
+        extract_to = Path(extract_to).mkdir(parents=True, exist_ok=True)
         archive_path = extract_to / 'lfw.tgz'
         with open(archive_path, 'wb') as archive:
             print('Downloading Labeled Faces in the Wild...')
