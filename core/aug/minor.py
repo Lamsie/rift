@@ -2,7 +2,7 @@ import random
 
 from typing import Dict, Any
 
-from PIL import Image as PIL_Image
+from PIL import Image as PIL_Image, ImageEnhance as PIL_ImageEnhance
 
 from .cracks import draw_cracks
 from .stains import draw_stains
